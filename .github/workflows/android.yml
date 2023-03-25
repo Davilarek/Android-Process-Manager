@@ -17,6 +17,8 @@ jobs:
         cache: gradle
     - name: Build with Gradle
       run: ./gradlew build
+    - name: Tree output
+      run: tree app/build
     - uses: actions/upload-artifact@v2
       with:
         name: app-debug.apk
