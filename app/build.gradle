@@ -11,18 +11,18 @@ def getVersion(){
     return descriptionInfo[0] + "." + descriptionInfo[1]
 }
 
-def debugKeystoreProperties = new Properties()
-debugKeystoreProperties.load(new FileInputStream(rootProject.file("debug_keystore.properties")))
+//def debugKeystoreProperties = new Properties()
+//debugKeystoreProperties.load(new FileInputStream(rootProject.file("debug_keystore.properties")))
 
 android {
-    signingConfigs {
-        debug_config {
-            keyAlias debugKeystoreProperties['keyAlias']
-            keyPassword debugKeystoreProperties['keyPassword']
-            storeFile file(debugKeystoreProperties['storeFile'])
-            storePassword debugKeystoreProperties['storePassword']
-        }
-    }
+    //signingConfigs {
+    //    debug_config {
+    //        keyAlias debugKeystoreProperties['keyAlias']
+    //        keyPassword debugKeystoreProperties['keyPassword']
+    //        storeFile file(debugKeystoreProperties['storeFile'])
+    //        storePassword debugKeystoreProperties['storePassword']
+    //    }
+    //}
 
     compileSdkVersion 28
     defaultConfig {
